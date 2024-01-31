@@ -1,0 +1,34 @@
+import React from 'react';
+import './card.css';
+
+function Card({title,imgUrl}) {
+
+    
+  return (
+    <div className='card-page-div'>
+    {/* {data.map((item)=>( */}
+     <div className='card-container'> {/*key={item.id} }*/}
+        <div className='card-img-container'>
+            <img src={imgUrl} alt='img'/>
+        </div>
+        <div className='card-content'>
+            <div className='card-title'>
+                <h3>{title}</h3>
+                <hr></hr>
+            </div>
+            
+            {/* <div className='card-btn'>
+            <button>
+                <p>Read more</p>
+            </button>
+        </div> */}
+        </div>
+        
+        
+    </div>
+    {/*))}*/}
+    </div>
+  )
+}
+
+export default Card

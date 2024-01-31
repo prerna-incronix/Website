@@ -1,0 +1,15 @@
+/* posters.css */
+.posters-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0%;
+   
+  }
+  
+  img {
+    width: 300px; /* Adjust the width as needed */
+    scroll-snap-align: start;
+    margin-right: 10px; /* Adjust the margin between posters */
+  }
+  

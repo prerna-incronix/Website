@@ -1,0 +1,108 @@
+.image-row {
+margin: 0;
+padding: 0;
+}
+
+/* .Awards about2{
+    max-width: 100%; /* Adjust as needed */
+  /* margin: 0 auto; */ */
+
+  
+/* padding-top: 40px !important; 
+padding-bottom: 30px !important; */
+/* } */
+
+/* .owl-stage{
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0s ease 0s; 
+    width: 1242px;
+} */
+
+/* .owl-item active{
+    width: 310.5px; 
+    margin-right: 0px;
+    background-color: white;
+}
+
+.single_Awards single_product{
+    margin: 0 0 25px;
+     min-height: 200px; 
+     padding: 0 !important;
+     display: inline-block; */
+/* }
+
+.product_dec{
+    padding:0; 
+    text-align: center;
+}
+
+.product_img{
+    height: 20px;
+    text-align: center;
+    display:flex; */
+/* }
+.img{
+    height: 250px; 
+    width: auto;;
+    display: grid;
+}
+
+.owl-item active{
+    width: 310.5px;
+    margin-right: 0px;
+    background-color: gold;
+} */
+
+/* .single_Awards single_product{
+    margin: 0 0 25px; 
+    min-height: 200px;
+    padding: 0 !important;
+}
+
+.owl-prev .owl-next .owl-nav .owl-dots{
+    display: none;
+} */
+
+
+
+
+
+
+
+/* ImageRow.css */
+.image-row-container {
+    text-align: center;
+    
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Optional: align items vertically in the center */
+  }
+  
+  .img {
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin-right: 19px; /* Adjust the margin as needed */
+  }
+
+  .image-row{
+    margin: 0px;
+    padding: 4px;
+  }
+
+  .image-item{
+    font-weight: bolder;
+    align-items:center ;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 2px 2px 15px 0px rgba(12, 12, 12, 0.5)
+    ;
+  }
+  .image-row-container{
+    text-align: center;
+    background-color:white(235, 223, 231);
+  }
+  
+  

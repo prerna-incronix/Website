@@ -1,0 +1,180 @@
+/* HomePage.css */
+/* Add your styles here */
+.home-main-div {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+  
+  .logo img {
+    height: 40px; /* Adjust the height of your logo as needed */
+  }
+  
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  
+  .hero-section {
+    text-align: center;
+    
+    padding-bottom: 30%;
+    /* background-image: url('../src/assets/backgrd.jpg'); */
+   
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5em;
+    
+  }
+  
+  .hero-section p {
+    font-size: 1.2em;
+    color: #555;
+  }
+/* home.css */
+/* Existing styles for Navigation Bar and Hero Section */
+
+.about-us-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4; /* Adjust background color as needed */
+  }
+  
+  .about-us-content {
+    max-width: 600px; /* Increase the max-width for a larger text area */
+  }
+  
+  .about-us-content h2 {
+    font-size: 2em;
+  }
+  
+  .about-us-content p {
+    font-size: 1.4em; /* Increase the font size for better readability */
+    line-height: 1.6; /* Adjust the line height for better spacing */
+  }
+  
+  .about-us-image img {
+    width: 30%; /* Make the image responsive */
+    border-radius: 10px; /* Optional: Add border-radius to the image */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    padding-left: 50%;
+  }
+    
+  .categories-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping to the next line if the content exceeds the width */
+    padding: 50px;
+    background-color: #e6e6e6; /* Adjust background color as needed */
+  }
+  
+  .category-card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Adjust the width to leave some space between cards */
+    margin: 10px; 
+    padding: 50%;/* Adjust the margin to create space between cards */
+    
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: 20%; /* Make the image responsive */
+    border-radius: 8px; /* Optional: Add border-radius to the image */
+    box-shadow: #333;
+    margin-bottom: 20px;
+    
+  }
+  
+  .category-card h3 {
+    font-size: 1.5em;
+  }
+ 
+  .category-card-section {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: stretch;
+    height: 100%;
+
+  }
+
+  .category-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-title h2 {
+    font-size: 2em;
+  }
+
+  /* home.css */
+/* Existing styles for Navigation Bar, Hero Section, About Us Section, Categories Section */
+
+/* Assuming some basic styles for the section */
+.gift-look-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.bold-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-us-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Optional: Add some hover effect */
+.contact-us-btn:hover {
+  background-color: #2980b9;
+}
+
+
+.bold-heading {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-us-btn {
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #4285f4; /* Adjust button color as needed */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-us-btn:hover {
+  background-color: #3367d6; /* Adjust button color on hover as needed */
+}

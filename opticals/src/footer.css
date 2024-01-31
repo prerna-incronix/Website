@@ -1,0 +1,27 @@
+/* footer.css */
+.footer-section {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-contact p {
+    margin: 0;
+  }
+  
+  .social-media-icons {
+    font-size: 1.5em;
+  }
+  
+  .logo-footer img {
+    width: 100px; /* Adjust the width of the logo as needed */
+  }
+  

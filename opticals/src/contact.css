@@ -1,0 +1,39 @@
+/* contactUs.css */
+
+.contact-us-main-div {
+    padding: 20px;
+  }
+  
+  .contact-us-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-section {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .additional-info-section {
+    margin-top: 30px;
+  }
+  
+  .additional-info-section h2 {
+    margin-bottom: 10px;
+  }
+  

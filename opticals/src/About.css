@@ -1,0 +1,30 @@
+
+.about-us-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4; /* Adjust background color as needed */
+  }
+  
+  .about-us-content {
+    max-width: 600px; /* Increase the max-width for a larger text area */
+  }
+  
+  .about-us-content h2 {
+    font-size: 2em;
+  }
+  
+  .about-us-content p {
+    font-size: 1.4em; /* Increase the font size for better readability */
+    line-height: 1.6; /* Adjust the line height for better spacing */
+  }
+  
+  .about-us-image img {
+    width: 30%; /* Make the image responsive */
+    border-radius: 10px; /* Optional: Add border-radius to the image */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    padding-left: 50%;
+  }
