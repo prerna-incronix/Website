@@ -16,6 +16,7 @@ import Unisex from './Unisex';
 const ImageRow = () => {
 
   const [showCatalogue, setShowCatalogue] = useState(false);
+  
 
   const showCataloguePage = () => {
     setShowCatalogue(true);
@@ -31,7 +32,7 @@ const ImageRow = () => {
     setShowCatalogue2(false);
   };
 
-  const [showCatalogue2, setShowCatalogue2] = useState(false);
+  const [showCatalogue2, setShowCatalogue2] = useState(true);
 
   const showCataloguePage2 = () => {
     setShowCatalogue2(true);

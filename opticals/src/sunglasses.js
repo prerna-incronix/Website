@@ -36,7 +36,7 @@ const ImageRow = () => {
     setShowCatalogue7(false);
   };
 
-  const [showCatalogue6, setShowCatalogue6] = useState(false);
+  const [showCatalogue6, setShowCatalogue6] = useState(true);
 
   const showCataloguePage6 = () => {
     setShowCatalogue6(true);

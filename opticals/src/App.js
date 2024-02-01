@@ -148,7 +148,6 @@ const App = () => {
         <Route path='/Product' element={<Products />} /> 
         <Route path='/sunglasses' element={<Sunglass />} />
       </Routes>
-      
       <Footer />
     </div>
   );
