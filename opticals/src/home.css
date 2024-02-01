@@ -70,6 +70,7 @@
     display: flex;
     justify-content: center;
     padding-left: 50%;
+    /* style={{objectFit: 'cover',width:'50%',height:'50%'}} */
   }
     
   .categories-section {
@@ -130,7 +131,7 @@
 /* Assuming some basic styles for the section */
 .gift-look-section {
   text-align: center;
-  padding: 20px;
+  padding: 70px;
   background-color: #f8f8f8;
 }
 
@@ -177,4 +178,8 @@
 
 .contact-us-btn:hover {
   background-color: #3367d6; /* Adjust button color on hover as needed */
+}
+
+.contact-us-btn a {
+  color: #ffff;
 }

@@ -1,9 +1,16 @@
  .nav-links  {
    
-    text-decoration: none;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    text-decoration: none;
+
+  }
+  .navbar.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index value as needed */
   }
   
   .nav__link::after {
@@ -26,12 +33,12 @@
     color: rgb(85, 255, 136);
   
   }
+
+
+  .nav__link {
+    text-decoration: none;
+  }
   
-  
-   .nav.fixed{
-    background: aqua;
-    transition: 0.5s ease-in-out;
-  } 
   
    .nav__brand {
     text-transform: uppercase;
@@ -48,8 +55,10 @@
     justify-content: center;
     align-items: center;
     padding-top: 10px;
+    padding: 10px;
+    padding-left: 10px;
     height: 50px;
-    width: 50px;
+    width: 60px;
     object-fit: cover;
     
   }
@@ -66,16 +75,20 @@
     align-items: center;
     justify-content: space-around;
     gap: 1rem;
+    text-decoration: none;
   }
   .nav__item {
     list-style: none;
     font-size: 20px;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 
   }
   .nav__item a {
     color: white;
+    text-decoration: none;
+    padding: 20px;
   }
   
   
@@ -94,8 +107,10 @@
     justify-content: space-between;
     padding: 20px;
     background-color: rgba(33, 150, 243, 100);
-    position: sticky;
+    position:fixed;
     top: 0;
+    z-index: 1;
+    
     
    }
   @media screen and (max-width: 768px) {

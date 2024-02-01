@@ -44,6 +44,7 @@ function Navbar() {
 
   return (
     <>
+      
       <nav className="navbar">
         <Link to="/home" className="nav__brand" onClick={closeNav}>
           <img className="nav_logo" src={logo} alt="logo"/>

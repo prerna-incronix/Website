@@ -215,8 +215,15 @@ const Posters = () => {
     const fetchPosters = async () => {
       try {
         const snapshot = await getDocs(advertisementCollection);
-        const posters = snapshot.docs.map((doc) => doc.data().ImageURL); // Assuming 'imagePaths' is an array of image URLs
+        const posters = snapshot.docs.map((doc) => doc.data().ImageURL);
         setPostersData(posters);
+        console.log('Uploading Images')
+        // Preload images into browser cache
+        posters.forEach((poster) => {
+          const img = new Image();
+          img.src = poster;
+        });
+        console.log('Images fetched from cache memory')
       } catch (error) {
         console.error('Error fetching posters:', error);
       }
@@ -231,20 +238,20 @@ const Posters = () => {
         setCurrentPoster((prevPoster) => (prevPoster + 1) % postersData.length);
         postersContainerRef.current.scrollLeft = posterWidth * currentPoster;
       }
-    }, 3000); // Adjust the duration as needed
+    }, 3000);
 
     return () => clearInterval(scrollInterval);
   }, [posterWidth, postersData.length, currentPoster]);
 
   const postersContainerStyle = {
     display: 'flex',
-    overflow: 'hidden', // Hide the scrollbar
+    overflow: 'hidden',
     position: 'relative',
     width: '100%',
   };
 
   const posterStyle = {
-    position: 'relative', // Added relative positioning
+    position: 'relative',
     flex: '0 0 auto',
     minWidth: '100%',
     height: '100vh',
@@ -260,7 +267,7 @@ const Posters = () => {
     transform: 'translate(-50%, -50%)',
     textAlign: 'center',
     color: '#fff',
-    zIndex: 1, // Ensure the text is above the posters
+    zIndex: 1,
   };
 
   return (

@@ -193,26 +193,35 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Catalogue = () => {
   const [catalogueData, setCatalogueData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const productsCollection = collection(db, 'products');
-
-    // Fetch data from Firebase Firestore
     const fetchData = async () => {
       try {
-        const snapshot = await getDocs(productsCollection);
-        const productsData = snapshot.docs.map((doc) => doc.data());
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const productsCollection = collection(db, 'products');
+
+        const querySnapshot = await getDocs(productsCollection);
+
+        const productsData = querySnapshot.docs
+          .filter((doc) => doc.data().gender === 'men') // Filter by gender field
+          .map((doc) => doc.data());
+
         setCatalogueData(productsData);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
@@ -230,6 +239,7 @@ const Catalogue = () => {
                     alt="Product"
                     className="img img-fluid o_we_custom_image"
                     loading="lazy"
+                    style={{objectFit: 'cover',width:'50%',height:'50%'}}
                   />
                 </a>
                 <div className="s_product_list_item_link">

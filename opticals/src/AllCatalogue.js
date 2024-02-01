@@ -47,14 +47,15 @@ const AllCatalogue = () => {
             <div className="row">
               {allcatalogueData.map((product, index) => (
                 <div key={index} className="col-md-4 col-6 o_colored_level col-lg-4">
-                <a href="" data-bs-original-title="" title="">
+                
                   <img
                     src={product.imageUrls || " "}
                     alt="Product"
                     className="img img-fluid o_we_custom_image"
                     loading="lazy"
+                    style={{objectFit: 'cover',width:'50%',height:'50%'}}
                   />
-                </a>
+                
                 <div className="s_product_list_item_link">
                   <p>Name: {product.name || 'N/A'}</p>
                   <p>Model No: {product.modelno || 'N/A'}</p>

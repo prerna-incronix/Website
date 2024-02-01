@@ -13,6 +13,7 @@ import Navbar from './nav';
 import ScrollReveal from 'scrollreveal';
 import VanillaTilt from 'vanilla-tilt';
 import Poster from './posters';
+import sunglass from './sunglasses';
 
 
 
@@ -63,7 +64,7 @@ const HomePage = () => {
         <Link to='/Product' >
         <Card title='Eyewear' imgUrl={sunglasses} />
         </Link>
-        <Link to='/Product' >
+        <Link to='/sunglasses' >
         <Card title='Sunglasses' imgUrl={sunglasses} />
         </Link>
       </section>

@@ -13,47 +13,37 @@ import products from './Product'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-// const products = [
-    
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model302' },
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model303'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model304'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model305'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model306'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model307'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model308'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model309'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model400'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model401'},
-//     { imgSrc: womenImage1, productName: 'Vinsent Chase model402'},
-    
-// ]  
-
-
 const Cataloguewomen = () => {
   const [catalogueWomenData, setCatalogueWomenData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const productsCollection = collection(db, 'products');
-
-    // Fetch data from Firebase Firestore
     const fetchData = async () => {
       try {
-        const snapshot = await getDocs(productsCollection);
-        const productsData = snapshot.docs.map((doc) => doc.data());
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const productsCollection = collection(db, 'products');
+
+        const querySnapshot = await getDocs(productsCollection);
+
+        const productsData = querySnapshot.docs
+          .filter((doc) => doc.data().gender === 'women') // Filter by gender field
+          .map((doc) => doc.data());
+
         setCatalogueWomenData(productsData);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
+  if (loading) {
+    return <p>Loading...</p>;
+  }
   return (
     <div>
       <main>
@@ -70,6 +60,7 @@ const Cataloguewomen = () => {
                     alt="Product"
                     className="img img-fluid o_we_custom_image"
                     loading="lazy"
+                    style={{objectFit: 'cover',width:'50%',height:'50%'}}
                   />
                 </a>
                 <div className="s_product_list_item_link">

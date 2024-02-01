@@ -84,6 +84,7 @@ import firebaseConfig from './firbaseConfig';
 import Posters from './posters';
 import Products from './Product';
 import Catlogue from './Catlogue';
+import Sunglass from './sunglasses';
 
 
 // const Products = ({ products }) => (
@@ -145,8 +146,9 @@ const App = () => {
         <Route path='/home' element={<HomePage />} />
         <Route path='/Catalogue' element={<Catlogue />} />
         <Route path='/Product' element={<Products />} /> 
+        <Route path='/sunglasses' element={<Sunglass />} />
       </Routes>
-     
+      
       <Footer />
     </div>
   );
