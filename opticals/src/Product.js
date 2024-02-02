@@ -22,6 +22,7 @@ const ImageRow = () => {
     setShowCatalogue(true);
     setShowCatalogue1(false);
     setShowCatalogue2(false);
+    setShowCatalogue3(false);
   };
 
   const [showCatalogue1, setShowCatalogue1] = useState(false);
@@ -30,6 +31,7 @@ const ImageRow = () => {
     setShowCatalogue1(true);
     setShowCatalogue(false);
     setShowCatalogue2(false);
+    setShowCatalogue3(false);
   };
 
   const [showCatalogue2, setShowCatalogue2] = useState(true);
@@ -38,6 +40,7 @@ const ImageRow = () => {
     setShowCatalogue2(true);
     setShowCatalogue(false);
     setShowCatalogue1(false);
+    setShowCatalogue3(false);
   }
 
   const [showCatalogue3, setShowCatalogue3] = useState(false);
@@ -46,6 +49,7 @@ const ImageRow = () => {
     setShowCatalogue3(true);
     setShowCatalogue(false);
     setShowCatalogue2(false);
+    setShowCatalogue1(false);
   };
 
   return (

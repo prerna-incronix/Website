@@ -257,7 +257,7 @@ const Posters = () => {
     height: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    filter: 'brightness(70%)',
+    // filter: 'brightness(70%)',
   };
 
   const textContainerStyle = {
@@ -266,8 +266,9 @@ const Posters = () => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     textAlign: 'center',
-    color: '#fff',
+    color: '#ffff',
     zIndex: 1,
+    
   };
 
   return (
@@ -282,10 +283,7 @@ const Posters = () => {
             display: index === currentPoster ? 'block' : 'none',
           }}
         >
-          <div style={textContainerStyle}>
-            <h1>Welcome to Your Optics Website</h1>
-            <p>Shaping the future of eyewear</p>
-          </div>
+          
         </div>
       ))}
     </div>

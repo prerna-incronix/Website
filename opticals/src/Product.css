@@ -1,76 +1,10 @@
-.image-row {
+/* .image-row {
 margin: 0;
 padding: 0;
-}
-
-/* .Awards about2{
-    max-width: 100%; /* Adjust as needed */
-  /* margin: 0 auto; */ */
-
-  
-/* padding-top: 40px !important; 
-padding-bottom: 30px !important; */
-/* } */
-
-/* .owl-stage{
-    transform: translate3d(0px, 0px, 0px);
-    transition: all 0s ease 0s; 
-    width: 1242px;
 } */
-
-/* .owl-item active{
-    width: 310.5px; 
-    margin-right: 0px;
-    background-color: white;
-}
-
-.single_Awards single_product{
-    margin: 0 0 25px;
-     min-height: 200px; 
-     padding: 0 !important;
-     display: inline-block; */
-/* }
-
-.product_dec{
-    padding:0; 
-    text-align: center;
-}
-
-.product_img{
-    height: 20px;
-    text-align: center;
-    display:flex; */
-/* }
-.img{
-    height: 250px; 
-    width: auto;;
-    display: grid;
-}
-
-.owl-item active{
-    width: 310.5px;
-    margin-right: 0px;
-    background-color: gold;
-} */
-
-/* .single_Awards single_product{
-    margin: 0 0 25px; 
-    min-height: 200px;
-    padding: 0 !important;
-}
-
-.owl-prev .owl-next .owl-nav .owl-dots{
-    display: none;
-} */
-
-
-
-
-
-
 
 /* ImageRow.css */
-.image-row-container {
+/* .image-row-container {
     text-align: center;
     
   }
@@ -78,16 +12,19 @@ padding-bottom: 30px !important; */
   .image-row {
     display: flex;
     justify-content: space-between; /* Adjust as needed */
-    align-items: center; /* Optional: align items vertically in the center */
-  }
+    /* align-items: center; /* Optional: align items vertically in the center */
+  /* } */ 
   
-  .img {
-    width: 200px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    margin-right: 19px; /* Adjust the margin as needed */
-  }
+  /* .img {
+    width: 200px; Adjust the width as needed */
+    /* height: 300px; /* Adjust the height as needed */
+    /* margin-right: 19px; Adjust the margin as needed */
+    
+  /* } */ 
 
-  .image-row{
+ 
+
+  /* .image-row{
     margin: 0px;
     padding: 4px;
   }
@@ -105,4 +42,86 @@ padding-bottom: 30px !important; */
     background-color:white(235, 223, 231);
   }
   
+   */ 
+
+   .image-row {
+    margin: 0;
+    padding: 0;
+  }
   
+  
+  .image-row-container {
+    text-align: center;
+  }
+  
+  
+  /* Flex container for images */
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  /* Style for individual images */
+  .image-item {
+    font-weight: bolder;
+    align-items: center;
+    padding: 20px; /* Adjusted padding for a more compact look */
+    margin: 10px; /* Adjusted margin for a more compact look */
+    box-shadow: 2px 2px 15px 0px rgba(12, 12, 12, 0.5);
+    position: relative; /* Added position relative for positioning overlay elements */
+    overflow: hidden; /* Hide overflowing content */
+    transition: box-shadow 0.3s ease; /* Adding transition for a smooth hover effect */
+  }
+  
+  
+  /* Hover effect for individual images */
+  .image-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow color and size as needed */
+    cursor: pointer; /* Change cursor on hover if you want to indicate interactivity */
+  }
+  
+  
+  /* Styling for overlay on hover */
+  .image-item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  
+  .image-item:hover p {
+    opacity: 1; /* Show text on hover */
+  }
+  
+  
+  .image-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Adjust the text color as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    z-index: 2;
+    opacity: 0; /* Hide text by default */
+  }
+  
+  
+  /* Styling for image */
+  .img {
+    width: 200px;
+    height: 300px;
+    margin-right: 19px;
+  }
+  
+  
+  /* Optional: Add background color to the container */
+  .image-row-container {
+    background-color: #eee; /* Adjust the background color as needed */
+  }

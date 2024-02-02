@@ -75,7 +75,7 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import 'firebase/storage';
 import Navbar from './nav';
 import ImageRow from './Image_row';
-import Footer from './footer';
+
 import About from './Aboutus';
 import Contact from './contact';
 import HomePage from './home';
@@ -85,6 +85,7 @@ import Posters from './posters';
 import Products from './Product';
 import Catlogue from './Catlogue';
 import Sunglass from './sunglasses';
+import Footer from './footer';
 
 
 // const Products = ({ products }) => (
@@ -92,11 +93,11 @@ import Sunglass from './sunglasses';
 //     <ImageRow products={products} />
 //   </div>
 // );
-const Catalogue = () => (
-  <div>
-    <Catalogue />
-  </div>
-)
+// const Catalogue = () => (
+//   <div>
+//     <Catalogue />
+//   </div>
+// )
 
 const App = () => {
   // const [products, setProducts] = useState([]);
@@ -141,6 +142,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
+      <Route path='/' element={<HomePage />} />
         <Route path='/aboutus' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/home' element={<HomePage />} />
