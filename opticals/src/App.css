@@ -9,10 +9,12 @@ nav {
 
 .logo img {
   height: 40px;
+  padding: 30px;
 }
 
 .menu {
   display: flex;
+  padding: 30px;
 }
 
 .menu a {
@@ -23,7 +25,8 @@ nav {
 }
 
 .homepage {
-  padding: 20px;
+  padding: 40px;
+
 }
 
 .hero-section {

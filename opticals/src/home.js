@@ -22,16 +22,6 @@ import sunglass from './sunglasses';
 const HomePage = () => {
   useEffect(() => {
 
-    
-    // VanillaTilt.init(document.querySelector('.animated-section'), {
-    //   // Customize your tilt options here
-    //   max: 25,             // Maximum tilt rotation (in degrees)
-    //   perspective: 500,   // Perspective value for the 3D effect
-    //   speed: 300,          // Tilt animation speed
-    //   glare: true,         // Whether to add glare effect
-    //   'max-glare': 0.5,    // Maximum glare opacity
-    //   'glare-prerender': false
-    // });
   }, []);
   return (
     <div className="home-main-div animated-section">

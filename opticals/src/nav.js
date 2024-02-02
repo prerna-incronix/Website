@@ -10,6 +10,19 @@ function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
 
+  // function setFixed(){
+  //     if(window.scrollY >=86){
+  //       setFix=true;
+  //       // console.log(setFix);
+  //       // console.log(window.scrollY);
+  //     }
+  //     else{
+  //       setFix=false;
+  //       // console.log(setFix);
+  //       // console.log(window.scrollY);
+  //     }
+
+  // }
 
   const closeNav = () => {
     setActive("nav__menu");
@@ -33,23 +46,23 @@ function Navbar() {
     <>
       
       <nav className="navbar">
-        <Link to="/home" className="nav__brand" onClick={closeNav} style={{ padding: '10px' }}>
+        <Link to="/home" className="nav__brand" onClick={closeNav}>
           <img className="nav_logo" src={logo} alt="logo"/>
         </Link>
         <ul className={active}>
           <li className="nav__item">
-            <Link to="/home" className="nav__link"  onClick={closeNav} style={{ padding: '10px',fontweight: '500', fontfamily: 'Poppins,sans-serif' }}>
-              HOME
+            <Link to="/home" className="nav__link"  onClick={closeNav}>
+              Home
             </Link>
           </li>
           <li className="nav__item">
-            <Link to = "/Aboutus"  onClick={closeNav} style={{ padding: '10px' }}>
-              ABOUT US
+            <Link to = "/Aboutus"  onClick={closeNav} >
+              About Us
             </Link>
           </li>
           <li className="nav__item">
-            <Link to= "/contact"  onClick={closeNav} style={{ padding: '10px' }}>
-              CONTACT US
+            <Link to= "/contact"  onClick={closeNav} >
+              Contact Us
             </Link>
           </li>
             </ul>
