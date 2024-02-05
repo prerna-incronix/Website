@@ -254,7 +254,7 @@ const Posters = () => {
     position: 'relative',
     flex: '0 0 auto',
     minWidth: '100%',
-    height: '100vh',
+    height: '70vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     // filter: 'brightness(70%)',

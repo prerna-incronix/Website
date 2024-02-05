@@ -1,7 +1,7 @@
 /* contactUs.css */
 
 .contact-us-main-div {
-    padding: 20px;
+    
     background-color: whitesmoke;
   }
   
@@ -49,4 +49,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+  
+  
+  .icon {
+    margin-right: 10px; /* Adjust margin as needed */
+    font-size: 1.5em; /* Adjust icon size */
   }

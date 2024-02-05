@@ -2,6 +2,8 @@ import React from 'react';
 import about from '../src/assets/about.jpg';
 import { Link } from 'react-router-dom';
 import './About.css';
+import Lottie from 'lottie-react';
+import animationData from './assets/Animation - 1707113666442.json';
 
 function About(){
     return(
@@ -12,7 +14,8 @@ function About(){
             </div>
             <div className="about-us-image">
                 {/* Replace the placeholder image with your actual image */}
-                <img src={about} alt="About Us" style={{width:'650px', height:'450px'}}/>
+                {/* <img src={about} alt="About Us" style={{width:'650px', height:'450px'}}/> */}
+                <Lottie animationData={animationData} style={{width:'650px', height:'450px'}} />
             </div>
         </div>
     );

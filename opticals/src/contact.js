@@ -3,6 +3,9 @@ import React from 'react';
 import './contact.css';  // Create a CSS file for styling if needed
 import animationData from './assets/Animation - 1707116949087.json';
 import Lottie from 'lottie-react';
+import { HiOutlineMail } from 'react-icons/hi';
+import { FaPhoneAlt } from "react-icons/fa";
+import { ImAddressBook } from "react-icons/im";
 
 const ContactUsPage = () => {
   return (
@@ -27,12 +30,22 @@ const ContactUsPage = () => {
       </div>
       </div>
       <div className="footer-contact">
-          <div style={{alignItems:'center', padding:'30px'}}>
+          <div style={{padding:'70px'}}>
           <h1>Contact Us</h1>
         <p>Feel free to reach out to us with any inquiries or feedback.</p>
-            <p>Contact Number: +123 456 789</p>
+        <br />
+        <br />
+        <br />
+        <div >
+        < FaPhoneAlt className="icon" />
+            <p>Contact Number: +91 9579229280</p>
+            </div>
+            
+            <div >    
+            <HiOutlineMail className="icon" style={{ fontSize: '2em' }} />
             <p>Email: info@example.com</p>
-          </div>
+            </div>
+            </div>
           <div>
           <Lottie animationData={animationData} style={{width: '350px', height:'640px', zIndex:'1', alignItems:'center', padding:'30px' }} />
           </div>
