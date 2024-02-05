@@ -9,6 +9,17 @@
    
 }
 
+.center-container {
+  
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(#951fc4, #482cc2); /* Replace these colors with your gradient colors */
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'poppins';
+  }
+
   
   .logo img {
     height: 40px; /* Adjust the height of your logo as needed */
@@ -17,7 +28,7 @@
   .nav-links a {
     margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
   }

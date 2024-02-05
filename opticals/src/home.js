@@ -1,5 +1,5 @@
 // HomePage.js
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.css';
 import './Aboutus';
 import logo from '../src/assets/logo.png';
@@ -14,17 +14,62 @@ import ScrollReveal from 'scrollreveal';
 import VanillaTilt from 'vanilla-tilt';
 import Poster from './posters';
 import sunglass from './sunglasses';
+import { useSpring, animated } from 'react-spring';
+import autoAnimate from '@formkit/auto-animate';
+import Lottie from 'lottie-react';
+import animationData from './assets/Animation - 1707113666442.json';
+// import Container from './container';
+import { Container } from 'react-bootstrap';
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 
 
 
 
 const HomePage = () => {
+  const [showCompany, setShowCompany] = useState(false);
   useEffect(() => {
-
+    const timer = setTimeout(() => {
+      setShowCompany(true);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
+
+  // const animateTitle = useAutoAnimate({
+  //   enabled: showCompany,
+  //   keyframes: [
+  //       { opacity: 0, transform: 'translateY(-50px)' },
+  //       { opacity: 1, transform: 'translateY(0)' },
+  //     ],
+  //     timing: {
+  //       duration: 1000,
+  //       easing: 'ease-out',
+  //     },
+  //   });
+  const companyAnimation = useSpring({
+    opacity: showCompany ? 1 : 0,
+    marginTop: showCompany ? 0 : -50,
+    from: { opacity: 0, marginTop: -50 },
+
+  });
+  const [text]=useTypewriter({
+    words: ["OLISH EYEWEAR "],
+   loop: {},
+    typeSpeed: 120,
+   
+
+})
+const title = "P";
   return (
     <div className="home-main-div animated-section">
+    {/* Animated Firm Name Section */}
+    <div className='center-container' companyAnimation>
+      {title}
+      
+        {text}
+        
+      
+      </div>
       <div className="posters-section">
         <Poster />
       </div>
@@ -32,15 +77,19 @@ const HomePage = () => {
 
       {/* About Us Section */}
       <div className="about-us-section">
-        <Link to='/opticals/src/Aboutus.js'></Link>
+        
+        
         <div className="about-us-content">
-          <h2>ABOUT US</h2>
-          <p>ᴀᴛ ᴘᴏʟɪꜱʜ ᴇʏᴇᴡᴇᴀʀ, ᴄʜᴏᴏꜱɪɴɢ ʏᴏᴜʀ ꜱᴛʏʟᴇ ɪꜱ ᴇꜰꜰᴏʀᴛʟᴇꜱꜱʟʏ ᴄʜɪᴄ, ᴛʜᴀɴᴋꜱ ᴛᴏ ᴀ ᴅɪᴠᴇʀꜱᴇ ᴀʀʀᴀʏ ᴏꜰ ᴛʀᴇɴᴅʏ ꜱʜᴀᴘᴇꜱ ʟɪᴋᴇ ᴇᴅɢʏ ʀᴇᴄᴛᴀɴɢʟᴇꜱ, ʀᴇᴛʀᴏ ʀᴏᴜɴᴅꜱ, ᴀɴᴅ ᴄʜᴀʀᴍɪɴɢ ᴄᴀᴛ ᴇʏᴇꜱ, ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴀ ᴠɪʙʀᴀɴᴛ ꜱᴘᴇᴄᴛʀᴜᴍ ᴏꜰ ᴄᴏʟᴏʀꜱ. ᴏᴜʀ ᴇʏᴇᴡᴇᴀʀ ꜱʜᴏᴡᴄᴀꜱᴇꜱ ɪɴɴᴏᴠᴀᴛɪᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʟᴀᴛᴇꜱᴛ ᴍᴀᴛᴇʀɪᴀʟꜱ, ɪɴᴄʟᴜᴅɪɴɢ ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴍᴇᴛᴀʟꜱ, ᴛʜᴇʀᴍᴏᴘʟᴀꜱᴛɪᴄ (ᴛʀ90), ᴀɴᴅ ʜɪɢʜ-ᴅᴇꜰɪɴɪᴛɪᴏɴ ᴄᴏᴍᴘʀᴇꜱꜱᴇᴅ ᴀᴄᴇᴛᴀᴛᴇ (ʜᴅᴄᴀ) ꜰᴏʀ ᴏᴜʀ ᴏᴘᴛɪᴄᴀʟ ꜰʀᴀᴍᴇꜱ. ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ᴘᴇʀꜰᴇᴄᴛ ꜰᴜꜱɪᴏɴ ᴏꜰ ꜱᴛʏʟᴇ ᴀɴᴅ ᴄᴏᴍꜰᴏʀᴛ ᴀᴛ ᴘᴏʟɪꜱʜ ᴇʏᴇᴡᴇᴀʀ, ᴡʜᴇʀᴇ ᴇᴠᴇʀʏ ᴅᴇᴛᴀɪʟ ʀᴇꜰʟᴇᴄᴛꜱ ᴏᴜʀ ᴅᴇᴅɪᴄᴀᴛɪᴏɴ ᴛᴏ ʀᴇᴅᴇꜰɪɴɪɴɢ ᴇʏᴇᴡᴇᴀʀ ᴇxᴄᴇʟʟᴇɴᴄᴇ.</p>
-         
+          <Container>          
+            <h2>ABOUT US</h2>
+          <p>Polish Eyewear embodies the essence of design perfection. A harmonious blend of style and fashion craftsmanship defines every piece within our eyewear collection. Our dedicated product team places paramount importance on the creation of eyewear that not only stands out as uniquely fashionable but also prioritizes the utmost comfort for the discerning consumer.</p>
+          </Container>
+
         </div>
         <div className="about-us-image">
           {/* Replace the placeholder image with your actual image */}
-          <img src={ aboutus } alt="About Us" style={{width:'650px', height:'450px'}}/>
+          {/* <img src={ aboutus } alt="About Us" style={{width:'650px', height:'450px'}}/> */}
+          <Lottie animationData={animationData} style={{width:'650px', height:'450px'}} />
         </div>
       </div>
 

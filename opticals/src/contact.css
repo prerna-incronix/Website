@@ -17,6 +17,7 @@
   
   
   
+  
   button {
     background-color: #4caf50;
     color: #fff;
@@ -38,3 +39,14 @@
     margin-bottom: 10px;
   }
   
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }

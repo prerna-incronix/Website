@@ -8,7 +8,8 @@
   }
   
   .about-us-content {
-    max-width: 600px; /* Increase the max-width for a larger text area */
+    max-width: 600px;
+    background-color: whitesmoke; /* Increase the max-width for a larger text area */
   }
   
   .about-us-content h2 {

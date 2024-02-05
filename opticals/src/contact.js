@@ -1,22 +1,23 @@
 // ContactUsPage.js
 import React from 'react';
 import './contact.css';  // Create a CSS file for styling if needed
+import animationData from './assets/Animation - 1707116949087.json';
+import Lottie from 'lottie-react';
 
 const ContactUsPage = () => {
   return (
     <div className="contact-us-main-div">
       <div className="contact-us-section">
-        <h1>Contact Us</h1>
-        <p>Feel free to reach out to us with any inquiries or feedback.</p>
+        
       </div>
 
       
 
       {/* Additional Contact Information Section */}
-      <div className="footer-contact">
+      <div >
         <div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3987422243545!2d73.81513907423825!3d18.556053568091293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfdab5aab983%3A0x1a46e42eb0095a0e!2sINCRONIX%20TECHNOLOGY%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1705987883242!5m2!1sen!2sin" 
-        width="600" 
+        width="1300" 
         height="300" 
         allowfullscreen="" 
         loading="lazy" 
@@ -24,18 +25,20 @@ const ContactUsPage = () => {
 
       </iframe>
       </div>
-          <div>
+      </div>
+      <div className="footer-contact">
+          <div style={{alignItems:'center', padding:'30px'}}>
+          <h1>Contact Us</h1>
+        <p>Feel free to reach out to us with any inquiries or feedback.</p>
             <p>Contact Number: +123 456 789</p>
             <p>Email: info@example.com</p>
           </div>
-          <div className="social-media-icons">
-            {/* Add your social media icons here */}
-            {/* For example, you can use Font Awesome icons */}
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-twitter"></i>
-            <i className="fab fa-instagram"></i>
+          <div>
+          <Lottie animationData={animationData} style={{width: '350px', height:'640px', zIndex:'1', alignItems:'center', padding:'30px' }} />
           </div>
-          </div>
+      </div>
+      
+          
     </div>
   );
 };
