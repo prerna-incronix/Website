@@ -14,11 +14,13 @@
   
   .about-us-content h2 {
     font-size: 2em;
+    font-family: 'Noto Serif', serif;
   }
   
   .about-us-content p {
     font-size: 1.4em; /* Increase the font size for better readability */
     line-height: 1.6; /* Adjust the line height for better spacing */
+    font-family: 'Lora', serif;
   }
   
   .about-us-image img {
@@ -29,3 +31,35 @@
     justify-content: center;
     padding-left: 50%;
   }
+
+  /* Add media queries for responsiveness */
+@media (max-width: 1200px) {
+  .about-us-section {
+    flex-direction: column-reverse; /* Stack image below content on smaller screens */
+    align-items: center;
+    padding: 30px;
+  }
+
+  .about-us-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-us-image img {
+    width: 100%;
+    height: auto; /* Make the image responsive */
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 20px;
+  }
+
+  .about-us-content {
+    text-align: center;
+  }
+}
+
+/* Add more media queries for other screen sizes as needed */

@@ -24,7 +24,9 @@ const Sunglassunisex = () => {
 
         const querySnapshot = await getDocs(sunglassesCollection);
 
-        const sunglassesData = querySnapshot.docs.map((doc) => doc.data());
+        const sunglassesData = querySnapshot.docs
+          .filter((doc) => doc.data().gender === 'unisex') // Filter by gender field
+          .map((doc) => doc.data());
 
         setSunglassunisexData(sunglassesData);
         setLoading(false);
@@ -54,7 +56,7 @@ const Sunglassunisex = () => {
   return (
     <div>
       <main>
-        <h1>Unisex</h1>
+        <h1>Men</h1>
 
         <section className="s_product_list o_colored_level" data-snippet="s_product_list" data-name="Items">
           <div className="container-fluid">
@@ -67,7 +69,7 @@ const Sunglassunisex = () => {
                       alt="Product"
                       className="img img-fluid o_we_custom_image"
                       loading="lazy"
-                      style={{ objectFit: 'cover', width: '100%', height: '20%' }}
+                      style={{ objectFit: 'cover', width: '50%', height: '50%' }}
                     />
                   </a>
                   <div className="s_product_list_item_link">

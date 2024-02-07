@@ -1,11 +1,11 @@
 
 // ImageRow.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Product.css'; // Import your custom CSS file
- import img1 from'./assets/women.jpg';
- import img2 from'./assets/menspects.jpg';
- import img3 from'./assets/unisex.jpg';
- import img5 from './assets/img5.png';
+ import img1 from'./assets/womenn.jpg';
+ import img2 from'./assets/menspectsss.jpg';
+ import img3 from'./assets/unisexx.jpg';
+ import img5 from './assets/img55.jpg';
  import Catlogue from './Catlogue';
 import CatlogueWoman from './Catloguewomen';
 import Unisex from './Unisex';
@@ -19,6 +19,7 @@ import Sunglassunisex from './Sunglassunisex';
 const ImageRow = () => {
 
   const [showCatalogue4, setShowCatalogue4] = useState(false);
+  const imageRowRef = useRef(null);
 
   const showCataloguePage4 = () => {
     setShowCatalogue4(true);
@@ -54,10 +55,28 @@ const ImageRow = () => {
     setShowCatalogue5(false);
   };
 
+  const scrollLeft = () => {
+    if (imageRowRef.current) {
+      imageRowRef.current.scrollBy({
+        left: -200, // Adjust the value based on your preference
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (imageRowRef.current) {
+      imageRowRef.current.scrollBy({
+        left: 200, // Adjust the value based on your preference
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="image-row-container">
       <h2 className="my-4">CATEGORY</h2>
-      <div className="image-row">
+      <div className="image-row" ref={imageRowRef}>
       
       <div className="image-item" onClick={showCataloguePage5}>
           {/* <a href='/Catalogue'><img src={img1} alt="Women's Optical Frame" className="img" /></a> */}
@@ -87,6 +106,15 @@ const ImageRow = () => {
       {showCatalogue6 && <SunglassAll />}
       {showCatalogue7 && <Sunglassunisex/>}  
 
+      {/* Navigation Arrows */}
+      <div className="navigation-arrows">
+        <button className="arrow-btn" onClick={scrollLeft}>
+          &lt; {/* Left arrow character */}
+        </button>
+        <button className="arrow-btn" onClick={scrollRight}>
+          &gt; {/* Right arrow character */}
+        </button>
+      </div>
       </div>
     
   );

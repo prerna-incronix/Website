@@ -1,15 +1,37 @@
 /* posters.css */
+
 .posters-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 0%;
-   
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 15px; /* Adjust padding for smaller screens */
+}
+
+.posters-container .poster {
+  scroll-snap-align: start;
+  margin-right: 10px; /* Adjust the margin between posters */
+  min-width: 100%; /* Make posters full width */
+}
+
+.posters-container img {
+  width: 100%; /* Make images responsive within posters */
+  height: auto; /* Allow height to adjust proportionally */
+}
+
+/* Media Query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .posters-container {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
-  
-  img {
-    width: 300px; /* Adjust the width as needed */
-    scroll-snap-align: start;
-    margin-right: 10px; /* Adjust the margin between posters */
+
+  .posters-container .poster {
+    margin-right: 5px; /* Adjust the margin between posters for smaller screens */
   }
+
+  .posters-container img {
+    width: auto; /* Allow images to take their natural width */
+    max-width: 100%; /* Ensure images don't exceed the container width */
+  }
+}
+
   

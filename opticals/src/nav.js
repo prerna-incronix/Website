@@ -10,19 +10,7 @@ function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
 
-  // function setFixed(){
-  //     if(window.scrollY >=86){
-  //       setFix=true;
-  //       // console.log(setFix);
-  //       // console.log(window.scrollY);
-  //     }
-  //     else{
-  //       setFix=false;
-  //       // console.log(setFix);
-  //       // console.log(window.scrollY);
-  //     }
-
-  // }
+  
 
   const closeNav = () => {
     setActive("nav__menu");
@@ -50,20 +38,20 @@ function Navbar() {
           <img className="nav_logo" src={logo} alt="logo"/>
         </Link>
         <ul className={active}>
-          <li className="nav__item">
+          <li className="nav__item" style={{fontFamily:'Cinzel, sansSerif', fontWeight:'bold'}}>
             <Link to="/home" className="nav__link"  onClick={closeNav}>
               Home
             </Link>
           </li>
-          <li className="nav__item">
+          <li className="nav__item" style={{fontFamily:'Cinzel, sansSerif', fontWeight:'bold'}}>
             <Link to = "/Aboutus"  onClick={closeNav} >
               About Us
             </Link>
           </li>
-          <li className="nav__item">
-            <Link to= "/contact"  onClick={closeNav} >
-              Contact Us
-            </Link>
+          <li className="nav__item" style={{ fontFamily: 'Cinzel, sans-serif', fontWeight:'bold' }}>
+          <Link to="/contact" onClick={closeNav} style={{ fontFamily: 'Cinzel, sans-serif' }}>
+            Contact Us
+          </Link>
           </li>
             </ul>
         <div onClick={navToggle} className={icon}>
@@ -80,41 +68,6 @@ function Navbar() {
 
 export default Navbar;
 
-// import React, { useState } from "react";
 
 
-// import "./nav.css";
-// import { Link, NavLink } from "react-router-dom";
 
-
-// export const Navbar = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-
-//   return (
-//     <nav>
-//       <Link to="/" className="title">
-//         POLISH
-//       </Link>
-//       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//       </div>
-//       <ul className={menuOpen ? "open" : ""}>
-//         <li>
-//           <NavLink to="/about">About</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/Catalogue">Catalogue</NavLink>
-//         </li>
-//         <li>
-//           <NavLink to="/Product">Products</NavLink>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-
-// export default Navbar;

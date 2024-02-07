@@ -1,7 +1,7 @@
  .nav__links  {
    
     color: white;
-    
+    font-family: 'Cinzel', sans-serif;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -43,7 +43,7 @@
    .nav__brand {
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "Karla";
+    font-family: 'Cinzel', sans-serif;
     color: rgb(84, 73, 146);
     transition: 0.4s;
     font-weight: 600;
@@ -55,18 +55,19 @@
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-    padding: 10px;
-    padding-left: 10px;
+    padding: 5px;
+    padding-left: 18px;
     height: 50px;
     width: 60px;
     object-fit: cover;
+    background-color: transparent;
     
   }
   
   .nav__brand:hover {
     font-size: x-large;
     text-decoration: none;
-    background-color: white;
+    background-color: transparent;
     color: black;
   }
   
@@ -76,7 +77,7 @@
     justify-content: space-around;
     gap: 1rem;
     text-decoration: none;
-
+    font-family: 'Cinzel', sans-serif;
     
   }
   .nav__item {
@@ -85,15 +86,15 @@
     color: white;
     /* font-weight: bold; */
     text-decoration: none;
-   
-    font-family: 'poppins';
+   padding-right: 20px;
+    font-family: 'Cinzel', sans-serif;
 
   }
   .nav__item a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Cinzel', sans-serif;
   }
   
   
@@ -110,30 +111,28 @@
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color:white;
+    padding: 30px;
+    background-color:  #003458;
     position:sticky;
     top: 0;
-    z-index: 1;
-    
-    
-   }
+    }
   @media screen and (max-width: 768px) {
     .nav__toggler {
       display: block;
       cursor: pointer;
     }
     .nav__menu {
-      position: relative;
+      position: absolute;
       
       height: 73vh;
-      width: 50%;
+      width: 100%;
       padding: 0;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      transform: translateX(100%);
-      transition: 0.5s ease-in;
+      
+      transition: left 0.3s, opacity 0.3s;
+      left: -100%;
       
     }
   } */
@@ -158,5 +157,70 @@
     font-family: Arial, Helvetica, sans-serif;
   }
    
+/* ... (Your existing CSS rules) ... */
+
+/* Media Query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    display: block;
+  }
+
+  .nav__menu {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust top position as needed */
+    left: -100%;
+    opacity: 1;
+    transition: left 0.3s, opacity 0.3s;
+    block-size: 200px;
+  }
+
+
+  .nav__menu.nav__active {
+    left: 0;
+    opacity: 1;
+  }
+
+  .nav__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 0px;
+  }
+
+  .nav__active::after {
+    bottom: -5px;
+  }
+
+  .nav__active:focus::after {
+    padding: 0;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
 
    

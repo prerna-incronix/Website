@@ -1,11 +1,11 @@
 
 // ImageRow.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Product.css'; // Import your custom CSS file
  import img1 from'./assets/women.jpg';
  import img2 from'./assets/menspects.jpg';
  import img3 from'./assets/unisex.jpg';
- import img5 from './assets/img5.png';
+ import img5 from './assets/img55.jpg';
  import Catlogue from './Catlogue';
 import CatlogueWoman from './Catloguewomen';
 import AllCatlogue from'./AllCatalogue';
@@ -16,6 +16,7 @@ import Unisex from './Unisex';
 const ImageRow = () => {
 
   const [showCatalogue, setShowCatalogue] = useState(false);
+  const imageRowRef = useRef(null);
   
 
   const showCataloguePage = () => {
@@ -52,20 +53,38 @@ const ImageRow = () => {
     setShowCatalogue1(false);
   };
 
+  const scrollLeft = () => {
+    if (imageRowRef.current) {
+      imageRowRef.current.scrollBy({
+        left: -200, // Adjust the value based on your preference
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (imageRowRef.current) {
+      imageRowRef.current.scrollBy({
+        left: 200, // Adjust the value based on your preference
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="image-row-container">
       <h2 className="my-4">CATEGORY</h2>
-      <div className="image-row">
+      <div className="image-row" ref={imageRowRef}>
       
       <div className="image-item" onClick={showCataloguePage1}>
           {/* <a href='/Catalogue'><img src={img1} alt="Women's Optical Frame" className="img" /></a> */}
           <img src={img1} alt="Women's Optical Frame" className="img" />
-          <p>Women</p>
+          <p>WOMEN</p>
         </div>
 
         <div className="image-item" onClick={showCataloguePage}>
           <img src={img2} alt="men's Optical Frame" className="img" />
-          <p>Men</p>
+          <p>MEN</p>
         </div>
 
         <div className="image-item" onClick={showCataloguePage3}>
@@ -84,6 +103,16 @@ const ImageRow = () => {
       {showCatalogue1 && <CatlogueWoman/>}
       {showCatalogue2 && <AllCatlogue/>}
       {showCatalogue3 && <Unisex/>}  
+
+      {/* Navigation Arrows */}
+      <div className="navigation-arrows">
+        <button className="arrow-btn" onClick={scrollLeft}>
+          &lt; {/* Left arrow character */}
+        </button>
+        <button className="arrow-btn" onClick={scrollRight}>
+          &gt; {/* Right arrow character */}
+        </button>
+      </div>
       </div>
     
   );

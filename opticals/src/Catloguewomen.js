@@ -73,9 +73,9 @@ const Cataloguewomen = () => {
                       style={{ objectFit: 'cover', width: '50%', height: '50%' }}
                     />
                   </a>
-                  <div className="s_product_list_item_link">
-                    <p>Name: {product.name || 'N/A'}</p>
-                    <p>Model No: {product.modelno || 'N/A'}</p>
+                  <div className="s_product_list_item_link" style={{fontFamily:'Lora, sans-serif'}}>
+                    <p style={{fontFamily:'Nunito Sans, sans-serif'}}>Name: {product.name || 'N/A'}</p>
+                    <p style={{fontFamily:'Nunito Sans, sans-serif'}}>Model No: {product.modelno || 'N/A'}</p>
                   </div>
                 </div>
               ))}

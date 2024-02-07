@@ -1,0 +1,28 @@
+/* Add the following CSS to your existing styles */
+
+/* Media Query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .s_product_list .container-fluid {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .s_product_list .row {
+      margin-right: -15px; /* Remove right margin to prevent horizontal overflow */
+      margin-left: -15px; /* Remove left margin to prevent horizontal overflow */
+    }
+  
+    .s_product_list .col-md-4 {
+      flex: 0 0 100%; /* Make each column take full width on smaller screens */
+      max-width: 100%; /* Ensure columns don't exceed container width */
+      padding-right: 15px; /* Add right padding for better spacing */
+      padding-left: 15px; /* Add left padding for better spacing */
+    }
+  
+    .o_we_custom_image {
+      width: 100%; /* Make the image responsive within the column */
+      height: auto; /* Allow height to adjust proportionally */
+    }
+  }
+  
+  /* Optional: Add more media queries for other screen sizes as needed */
+  

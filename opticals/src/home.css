@@ -8,16 +8,24 @@
     justify-content: center;
    
 }
+/* .home-main-div::before {
+  content: "";
+  display: block;
+  height: 1px; /* Adjust the thickness of the border */
+  /* background-image: linear-gradient(to right top, #5c153d, #5d194c, #5b205c, #53296c, #45327d, #483688, #4a3b94, #4c40a0, #6e3da7, #8e37aa, #ad2daa, #cb19a5);
+  width: 100%;
+  margin: 20px 0; /* Adjust the margin to control the space between sections and the border */
+/* } */ 
 
 .center-container {
   
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(#c03e99, #31b111); /* Replace these colors with your gradient colors */
+    background-color:#007ea7;
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    font-family: 'poppins';
+    font-family: 'Noto Serif', serif;
   }
 
   
@@ -29,8 +37,8 @@
     margin: 0 15px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    font-family: 'Noto Serif', serif;
+    
   }
   
   .hero-section {
@@ -60,6 +68,16 @@
     padding: 50px;
     background-color: #f4f4f4; /* Adjust background color as needed */
   }
+
+  /* .category-section::before {
+    content: "";
+    display: block;
+    height: 10px; /* Adjust the thickness of the border */
+    /* background: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12); /* Replace these colors with your gradient colors */
+    /* width: 100%;
+    margin: 20px 0; Adjust the margin to control the space between sections and the border */
+    
+  /* } */ */ */
   
   .about-us-content {
     max-width: 600px; /* Increase the max-width for a larger text area */
@@ -67,11 +85,14 @@
   
   .about-us-content h2 {
     font-size: 2em;
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
   }
   
   .about-us-content p {
     font-size: 1.4em; /* Increase the font size for better readability */
     line-height: 1.6; /* Adjust the line height for better spacing */
+    font-family: 'Lora', serif;
   }
   
   .about-us-image img {
@@ -115,6 +136,8 @@
   
   .category-card h3 {
     font-size: 1.5em;
+    position: fixed;
+    
   }
  
   .category-card-section {
@@ -136,6 +159,8 @@
   
   .category-title h2 {
     font-size: 2em;
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
   }
 
   /* home.css */
@@ -145,7 +170,8 @@
 .gift-look-section {
   text-align: center;
   padding: 70px;
-  background-color: #f8f8f8;
+  background-color:rgb(202, 201, 201);
+  font-family: 'Noto Serif', serif;
 }
 
 .bold-heading {
@@ -196,3 +222,52 @@
 .contact-us-btn a {
   color: #ffff;
 }
+
+/* ... (Your existing CSS rules) ... */
+
+/* Media Query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .center-container {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  .about-us-section {
+    flex-direction: column;
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .about-us-content {
+    max-width: 100%; /* Allow full width for text content */
+    margin-bottom: 20px; /* Add margin at the bottom for better spacing */
+  }
+
+  .about-us-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Allow the height to adjust proportionally */
+    padding-left: 0; /* Reset padding-left for full width */
+  }
+
+  .category-card-section {
+    flex-direction: column; /* Display cards in a single column */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .category-card {
+    width: 100%; /* Make each card full width */
+    margin: 10px 0; /* Adjust margin for better spacing between cards */
+    padding-bottom: 0; /* Reset padding-bottom */
+  }
+
+  .category-card img {
+    height: 100%; /* Make the image fill the card height */
+  }
+  .card-img-container img {
+
+    padding: 30px;
+  }
+  .gift-look-section {
+    padding: 40px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Additional media queries can be added as needed for other screen sizes */

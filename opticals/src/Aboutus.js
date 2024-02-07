@@ -10,7 +10,7 @@ function About(){
          <div className="about-us-section">
             <div className="about-us-content">
                 <h2>ABOUT US</h2>
-                <p>ᴀᴛ ᴘᴏʟɪꜱʜ ᴇʏᴇᴡᴇᴀʀ, ᴄʜᴏᴏꜱɪɴɢ ʏᴏᴜʀ ꜱᴛʏʟᴇ ɪꜱ ᴇꜰꜰᴏʀᴛʟᴇꜱꜱʟʏ ᴄʜɪᴄ, ᴛʜᴀɴᴋꜱ ᴛᴏ ᴀ ᴅɪᴠᴇʀꜱᴇ ᴀʀʀᴀʏ ᴏꜰ ᴛʀᴇɴᴅʏ ꜱʜᴀᴘᴇꜱ ʟɪᴋᴇ ᴇᴅɢʏ ʀᴇᴄᴛᴀɴɢʟᴇꜱ, ʀᴇᴛʀᴏ ʀᴏᴜɴᴅꜱ, ᴀɴᴅ ᴄʜᴀʀᴍɪɴɢ ᴄᴀᴛ ᴇʏᴇꜱ, ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴀ ᴠɪʙʀᴀɴᴛ ꜱᴘᴇᴄᴛʀᴜᴍ ᴏꜰ ᴄᴏʟᴏʀꜱ. ᴏᴜʀ ᴇʏᴇᴡᴇᴀʀ ꜱʜᴏᴡᴄᴀꜱᴇꜱ ɪɴɴᴏᴠᴀᴛɪᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʟᴀᴛᴇꜱᴛ ᴍᴀᴛᴇʀɪᴀʟꜱ, ɪɴᴄʟᴜᴅɪɴɢ ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴍᴇᴛᴀʟꜱ, ᴛʜᴇʀᴍᴏᴘʟᴀꜱᴛɪᴄ (ᴛʀ90), ᴀɴᴅ ʜɪɢʜ-ᴅᴇꜰɪɴɪᴛɪᴏɴ ᴄᴏᴍᴘʀᴇꜱꜱᴇᴅ ᴀᴄᴇᴛᴀᴛᴇ (ʜᴅᴄᴀ) ꜰᴏʀ ᴏᴜʀ ᴏᴘᴛɪᴄᴀʟ ꜰʀᴀᴍᴇꜱ. ᴇxᴘᴇʀɪᴇɴᴄᴇ ᴛʜᴇ ᴘᴇʀꜰᴇᴄᴛ ꜰᴜꜱɪᴏɴ ᴏꜰ ꜱᴛʏʟᴇ ᴀɴᴅ ᴄᴏᴍꜰᴏʀᴛ ᴀᴛ ᴘᴏʟɪꜱʜ ᴇʏᴇᴡᴇᴀʀ, ᴡʜᴇʀᴇ ᴇᴠᴇʀʏ ᴅᴇᴛᴀɪʟ ʀᴇꜰʟᴇᴄᴛꜱ ᴏᴜʀ ᴅᴇᴅɪᴄᴀᴛɪᴏɴ ᴛᴏ ʀᴇᴅᴇꜰɪɴɪɴɢ ᴇʏᴇᴡᴇᴀʀ ᴇxᴄᴇʟʟᴇɴᴄᴇ.</p>
+                <p>Polish Eyewear embodies the essence of design perfection. A harmonious blend of style and fashion craftsmanship defines every piece within our eyewear collection. Our dedicated product team places paramount importance on the creation of eyewear that not only stands out as uniquely fashionable but also prioritizes the utmost comfort for the discerning consumer.</p>
             </div>
             <div className="about-us-image">
                 {/* Replace the placeholder image with your actual image */}

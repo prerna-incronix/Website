@@ -96,6 +96,7 @@ import { initializeApp } from 'firebase/app';
 import 'firebase/auth'; // Add any other Firebase services you need
 import womenImage1 from './assets/WomenCatlogue/Women1.jpg';
 import products from './Product';
+import './Catlogue.css';
 
 const Catalogue = () => {
   const [catalogueData, setCatalogueData] = useState([]);

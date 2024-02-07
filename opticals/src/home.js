@@ -28,55 +28,52 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const HomePage = () => {
   const [showCompany, setShowCompany] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowCompany(true);
     }, 1000);
+
+    // Initialize ScrollReveal effect
+    ScrollReveal().reveal('.animated-section', {
+      duration: 4000,
+      distance: '10px',
+      easing: 'cubic-bezier(0.5, 0, 0, 1)',
+      origin: 'top',
+      interval: 200,
+    });
+
     return () => clearTimeout(timer);
   }, []);
 
-  // const animateTitle = useAutoAnimate({
-  //   enabled: showCompany,
-  //   keyframes: [
-  //       { opacity: 0, transform: 'translateY(-50px)' },
-  //       { opacity: 1, transform: 'translateY(0)' },
-  //     ],
-  //     timing: {
-  //       duration: 1000,
-  //       easing: 'ease-out',
-  //     },
-  //   });
   const companyAnimation = useSpring({
     opacity: showCompany ? 1 : 0,
     marginTop: showCompany ? 0 : -50,
     from: { opacity: 0, marginTop: -50 },
-
   });
-  const [text]=useTypewriter({
-    words: ["OLISH EYEWEAR "],
-   loop: {},
-    typeSpeed: 120,
-   
 
-})
-const title = "P";
+  const [text] = useTypewriter({
+    words: ["OLISH EYEWEAR "],
+    loop: {},
+    typeSpeed: 120,
+  });
+
+  const title = "P";
+
   return (
     <div className="home-main-div animated-section">
-    {/* Animated Firm Name Section */}
-    <div className='center-container' companyAnimation>
-      {title}
-      
+      {/* Animated Firm Name Section */}
+      <div className='center-container' companyAnimation style={{fontFamily: 'Noto Serif, serif'}}>
+        {title}
         {text}
-        
-      
       </div>
-      <div className="posters-section">
+      <div className="posters-section animated-section">
         <Poster />
       </div>
       
 
       {/* About Us Section */}
-      <div className="about-us-section">
+      <div className="about-us-section animated-section" >
         
         
         <div className="about-us-content">
@@ -94,14 +91,15 @@ const title = "P";
       </div>
 
       {/* Categories Section */}
-      <div className= "category-section">
+      <div className= "category-section animated-section">
       <div className="category-title">
         <h2>CATEGORIES</h2>
       </div>
       <section className="category-card-section">
         
         <Link to='/Product' >
-        <Card title='Eyewear' imgUrl={eyewear} />
+        <Card title='Eyewear' imgUrl={eyewear} style={{fontFamily: 'Cinzel, sans-serif'}}
+     />
         </Link>
         <Link to='/sunglasses' >
         <Card title='Sunglasses' imgUrl={sunglasses} />
@@ -109,7 +107,7 @@ const title = "P";
       </section>
 
       {/* Gift Yourself a New Look Section */}
-      <div id="gift-look" className="gift-look-section">
+      <div id="gift-look" className="gift-look-section animated-section">
         <h2 className="bold-heading">GIFT YOURSELVES A NEW LOOK</h2>
         <button className="contact-us-btn" >
           <Link to ="/contact">Contact Us</Link></button>
