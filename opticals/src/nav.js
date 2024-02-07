@@ -38,18 +38,18 @@ function Navbar() {
           <img className="nav_logo" src={logo} alt="logo"/>
         </Link>
         <ul className={active}>
-          <li className="nav__item" style={{fontFamily:'Cinzel, sansSerif', fontWeight:'bold'}}>
+          <li className="nav__item" >
             <Link to="/home" className="nav__link"  onClick={closeNav}>
               Home
             </Link>
           </li>
-          <li className="nav__item" style={{fontFamily:'Cinzel, sansSerif', fontWeight:'bold'}}>
+          <li className="nav__item" >
             <Link to = "/Aboutus"  onClick={closeNav} >
               About Us
             </Link>
           </li>
-          <li className="nav__item" style={{ fontFamily: 'Cinzel, sans-serif', fontWeight:'bold' }}>
-          <Link to="/contact" onClick={closeNav} style={{ fontFamily: 'Cinzel, sans-serif' }}>
+          <li className="nav__item" >
+          <Link to="/contact" onClick={closeNav} >
             Contact Us
           </Link>
           </li>
