@@ -36,7 +36,7 @@ const HomePage = () => {
 
     // Initialize ScrollReveal effect
     ScrollReveal().reveal('.animated-section', {
-      duration: 4000,
+      duration: 3000,
       distance: '10px',
       easing: 'cubic-bezier(0.5, 0, 0, 1)',
       origin: 'top',
@@ -52,20 +52,20 @@ const HomePage = () => {
     from: { opacity: 0, marginTop: -50 },
   });
 
-  const [text] = useTypewriter({
-    words: ["OLISH EYEWEAR "],
-    loop: {},
-    typeSpeed: 120,
-  });
+  // const [text] = useTypewriter({
+  //   words: ["OLISH EYEWEAR "],
+  //   loop: {},
+  //   typeSpeed: 120,
+  // });
 
-  const title = "P";
+  // const title = "P";
 
   return (
     <div className="home-main-div animated-section">
       {/* Animated Firm Name Section */}
       <div className='center-container' companyAnimation style={{fontFamily: 'Noto Serif, serif'}}>
-        {title}
-        {text}
+        {/* {title}
+        {text} */}
       </div>
       <div className="posters-section animated-section">
         <Poster />

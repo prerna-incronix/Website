@@ -106,11 +106,11 @@ const ImageRow = () => {
 
       {/* Navigation Arrows */}
       <div className="navigation-arrows">
-        <button className="arrow-btn" onClick={scrollLeft}>
-          &lt; {/* Left arrow character */}
+      <button className="arrow-btn" onClick={scrollLeft}>
+          ◄ {/* Custom left arrow */}
         </button>
         <button className="arrow-btn" onClick={scrollRight}>
-          &gt; {/* Right arrow character */}
+          ► {/* Custom right arrow */}
         </button>
       </div>
       </div>
