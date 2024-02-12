@@ -107,13 +107,14 @@ const HomePage = () => {
       </section>
 
       {/* Gift Yourself a New Look Section */}
-      <div id="gift-look" className="gift-look-section animated-section">
-        <h2 className="bold-heading">GIFT YOURSELVES A NEW LOOK</h2>
-        <button className="contact-us-btn" >
-          <Link to ="/contact">Contact Us</Link></button>
+      <div id="gift-look" className="gift-look-section">
+          <h2 className="bold-heading"style={{ fontFamily: 'Nunito Sans, sans-serif',marginLeft:'439px',border: '2px solid black',padding: '6px',borderRadius:'1px', width:'326px',color:'black',fontFamily:'ralway-sans-serif'}}>GIFT YOURSELVES A NEW LOOK</h2>
+          <button className="contact-us-btn">
+            <Link to="/contact"style={{ fontFamily: 'Nunito Sans, sans-serif' }}>Contact Us</Link></button>
+        </div>
       </div>
       </div>
-    </div>
+   
   );
 };
 

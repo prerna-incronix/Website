@@ -36,7 +36,7 @@ const ContactUsPage = () => {
         <br />
         <div >
         < FaPhoneAlt className="icon" />
-            <p>Contact Number: +91 9579229280</p>
+            <p>Contact Number: +91 9579234525</p>
             </div>
             <br />
             <div >    
